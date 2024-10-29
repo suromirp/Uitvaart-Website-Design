@@ -1,0 +1,19 @@
+//_base.scss
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'poppins', 'Times New Roman';
+  font-size: $font-size-base;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 1440px;
+  margin: 0 auto;
+}

@@ -1,0 +1,190 @@
+// _homepage.scss
+
+// Voorkom horizontaal scrollen, maar sta verticaal scrollen toe
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.8) contrast(0.95);
+}
+
+// Hero text
+.hero-text {
+  position: absolute;
+  top: 60%;
+  left: 0;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text .text-main-color {
+  color: $primary-color;
+  filter: contrast(2);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text .text-accent-color {
+  color: $secundary-color;
+  filter: contrast(3);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-image img {
+  object-fit: cover;
+  height: auto;
+  max-height: 650px;
+  width: 100%;
+}
+
+// Blog post preview section
+.blog-preview-section {
+  height: 500px;
+  width: 100%;
+  background-color: $background-color;
+}
+
+.blog-preview-section > h2 {
+  font-size: 30px;
+  padding: 20px;
+}
+
+.blog-preview-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  width: auto;
+  gap: 0.5rem;
+}
+
+.blog-post-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-content: center;
+  height: auto;
+  width: 400px;
+  background-color: $tertiary-color;
+  border-radius: 10px;
+}
+
+.blog-preview-button {
+  @include primary-button();
+}
+
+.blog-post-preview__left img,
+.blog-post-preview__middle img,
+.blog-post-preview__right img {
+  object-fit: cover;
+  height: auto;
+  width: 90%;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+// Banner section
+.banner-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.text-top-left,
+.text-bottom-right {
+  max-width: 500px;
+  height: auto;
+  z-index: 2;
+}
+
+.text-top-left {
+  align-self: flex-start;
+  margin-top: 3vw;
+}
+
+.text-bottom-right {
+  align-self: flex-end;
+  margin-bottom: 3vw;
+}
+
+.banner-container h2 {
+  font-size: clamp(30px, 3vw, 40px);
+  line-height: 1.2;
+}
+
+.banner-container p,
+.cta-link {
+  font-size: clamp(18px, 2vw, 27px);
+  color: $text-color;
+}
+
+.banner-container p {
+  padding-bottom: 25px;
+}
+
+.text-yellow {
+  color: $text-yellow-accent;
+  font-weight: 500;
+}
+
+.cta-link {
+  @include primary-button();
+  }
+
+// Highlight section
+.highlight-section {
+  width: 100%;
+  height: auto;
+  background-color: $tertiary-color;
+}
+
+.highlight-container {
+  text-align: center;
+}
+
+.highlight-container h2 {
+  font-size: clamp(30px, 3vw, 45px);
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.highlight-container p {
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 400;
+}
+
+.image-slider {
+  display: flex;
+}
