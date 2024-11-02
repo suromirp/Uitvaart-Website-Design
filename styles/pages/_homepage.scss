@@ -185,6 +185,28 @@ body {
   font-weight: 400;
 }
 
-.image-slider {
-  display: flex;
+// Image slider
+
+.image-slider-section {
+  width: 100%;
+  height: 70vh;
+  border: black;
 }
+
+.wrapper-lightblue {
+  width: 100%;
+  height: 100%;
+  background-color: $secundary-color;
+  filter: brightness(1.5) opacity(0.2);
+}
+
+.image-wrapper {
+  object-fit: cover;
+  height: auto;
+  width: 10%;
+}
+
+.image-wrapper img {
+  filter: none;
+}
+
