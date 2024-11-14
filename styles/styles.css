@@ -307,22 +307,18 @@ body {
 }
 
 .highlight-section {
-  width: 100%;
-  height: auto;
+  padding: 40px 0;
   background-color: #ffffff;
-}
-
-.highlight-container {
   text-align: center;
 }
 
-.highlight-container h2 {
+.highlight-section h2 {
   font-size: clamp(30px, 3vw, 45px);
   font-weight: 700;
   color: #EE9E1A;
 }
 
-.highlight-container p {
+.highlight-section p {
   font-size: clamp(20px, 3vw, 30px);
   font-weight: 400;
 }

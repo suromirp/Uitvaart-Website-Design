@@ -164,23 +164,20 @@ body {
   }
 
 // Highlight section
-.highlight-section {
-  width: 100%;
-  height: auto;
-  background-color: $tertiary-color;
-}
 
-.highlight-container {
+.highlight-section {
+  padding: 40px 0;
+  background-color: $tertiary-color;
   text-align: center;
 }
 
-.highlight-container h2 {
+.highlight-section h2 {
   font-size: clamp(30px, 3vw, 45px);
   font-weight: 700;
   color: $primary-color;
 }
 
-.highlight-container p {
+.highlight-section p {
   font-size: clamp(20px, 3vw, 30px);
   font-weight: 400;
 }
