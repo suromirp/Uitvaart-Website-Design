@@ -1,6 +1,140 @@
-// _homepage.scss
+@import '../node_modules/normalize.css/normalize.css';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-// Voorkom horizontaal scrollen, maar sta verticaal scrollen toe
+body {
+  font-family: "poppins", "Times New Roman";
+  font-size: 10px;
+  color: black;
+  background-color: #fdf6e8;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  height: 40px;
+  background-color: #ffffff;
+  font-size: 15px;
+}
+
+.top-bar-text {
+  margin-left: 0;
+}
+
+.top-bar-text > p > span {
+  color: #51eef9;
+  font-weight: 500;
+}
+
+.top-bar-links {
+  display: flex;
+  gap: 10px;
+}
+
+.top-bar-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+.top-bar-links > a > span {
+  color: #51eef9;
+  font-weight: 500;
+}
+
+.divider {
+  color: #EE9E1A;
+  margin: 0;
+}
+
+.top-bar-divider {
+  width: 100%;
+  height: 4px;
+  background-color: #EE9E1A;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #ffffff;
+  width: 100%;
+  height: auto;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+  max-height: 125px;
+  object-fit: cover;
+  margin-right: -30px;
+  margin-left: -20px;
+  padding: 0;
+}
+
+.nav-links {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links a:active {
+  color: #EE9E1A;
+}
+
+.nav-links a:hover {
+  color: #EE9E1A;
+}
+
+.contact-button {
+  background-color: #EE9E1A;
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 25px;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.contact-button:hover {
+  color: #51eef9;
+  transition: background-color 0.7s ease;
+  box-shadow: 0 0 10px #51eef9;
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -21,7 +155,6 @@ body {
   filter: brightness(0.8) contrast(0.95);
 }
 
-// Hero text
 .hero-text {
   position: absolute;
   top: 60%;
@@ -37,13 +170,13 @@ body {
 }
 
 .hero-text .text-main-color {
-  color: $primary-color;
+  color: #EE9E1A;
   filter: contrast(2);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
 .hero-text .text-accent-color {
-  color: $secundary-color;
+  color: #51eef9;
   filter: contrast(3);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
@@ -55,11 +188,10 @@ body {
   width: 100%;
 }
 
-// Blog post preview section
 .blog-preview-section {
   height: 500px;
   width: 100%;
-  background-color: $background-color;
+  background-color: #fdf6e8;
 }
 
 .blog-preview-section > h2 {
@@ -83,12 +215,18 @@ body {
   align-content: center;
   height: auto;
   width: 400px;
-  background-color: $tertiary-color;
+  background-color: #ffffff;
   border-radius: 10px;
 }
 
 .blog-preview-button {
-  @include primary-button();
+  background-color: #EE9E1A;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 25px;
+  text-decoration: none;
+  margin-left: auto;
 }
 
 .blog-post-preview__left img,
@@ -101,7 +239,6 @@ body {
   border-radius: 10px;
 }
 
-// Banner section
 .banner-section {
   position: relative;
   width: 100%;
@@ -147,7 +284,7 @@ body {
 .banner-container p,
 .cta-link {
   font-size: clamp(18px, 2vw, 27px);
-  color: $text-color;
+  color: black;
 }
 
 .banner-container p {
@@ -155,19 +292,24 @@ body {
 }
 
 .text-yellow {
-  color: $text-yellow-accent;
+  color: #EE9E1A;
   font-weight: 500;
 }
 
 .cta-link {
-  @include primary-button();
-  }
+  background-color: #EE9E1A;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 25px;
+  text-decoration: none;
+  margin-left: auto;
+}
 
-// Highlight section
 .highlight-section {
   width: 100%;
   height: auto;
-  background-color: $tertiary-color;
+  background-color: #ffffff;
 }
 
 .highlight-container {
@@ -177,15 +319,13 @@ body {
 .highlight-container h2 {
   font-size: clamp(30px, 3vw, 45px);
   font-weight: 700;
-  color: $primary-color;
+  color: #EE9E1A;
 }
 
 .highlight-container p {
   font-size: clamp(20px, 3vw, 30px);
   font-weight: 400;
 }
-
-// Image slider
 
 .image-slider-section {
   display: flex;
@@ -254,3 +394,4 @@ body {
   color: #00bcd4;
 }
 
+/*# sourceMappingURL=styles.css.map */
