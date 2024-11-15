@@ -9,7 +9,6 @@ export function restoreScrollPosition() {
     if (scrollPosition) {
         window.scrollTo(0, parseInt(scrollPosition, 10));
     }
-    localStorage.removeItem("scrollPosition"); // Optioneel: verwijdert de opgeslagen positie na het laden
 }
 
 // Event listeners om de functies aan te roepen
