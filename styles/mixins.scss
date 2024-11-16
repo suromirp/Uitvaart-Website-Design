@@ -8,11 +8,43 @@
   text-decoration: none;
 }
 
-@mixin blog-post-preview {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: row;
-  width: auto;
-  gap: 0.5rem;
+@mixin preview-block-styles(
+  $top-left-radius: 10px,
+  $top-right-radius: 10px,
+  $bottom-left-radius: 10px,
+  $bottom-right-radius: 10px,
+  $img-top-left-radius: 10px,
+  $img-top-right-radius: 10px,
+  $img-bottom-left-radius: 10px,
+  $img-bottom-right-radius: 10px
+) {
+  border-radius: $top-left-radius $top-right-radius $bottom-right-radius $bottom-left-radius;
+
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: $img-top-left-radius $img-top-right-radius $img-bottom-right-radius $img-bottom-left-radius;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-color;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    @include primary-button();
+    padding: 20px 30px;
+    width: 150px;
+    font-size: 15px;
+    font-weight: 800;
+  }
 }
