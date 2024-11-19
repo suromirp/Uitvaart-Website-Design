@@ -123,12 +123,99 @@ nav .nav-container .contact-button:hover {
   box-shadow: 0 0 10px #51eef9;
 }
 
+.footer-container {
+  background-color: white;
+}
+.footer-container .info-section .contact-block {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.footer-container .info-section .contact-block .image-container {
+  display: flex;
+  flex: 1;
+  margin-right: 40px;
+}
+.footer-container .info-section .contact-block .image-container img {
+  width: 70vh;
+  height: 40vh;
+  max-height: 50vh;
+  max-width: 80vh;
+  object-fit: cover;
+  border-radius: 10px;
+  border-bottom-right-radius: 100px;
+}
+.footer-container .info-section .contact-block .contact-details {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2;
+  margin-left: 100px;
+}
+.footer-container .info-section .contact-block .contact-details h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.footer-container .info-section .contact-block .contact-details p {
+  font-size: 3rem;
+  margin: 0.2rem 0;
+  font-weight: 400;
+}
+.footer-container .info-section .contact-block .contact-details p span {
+  font-weight: 600;
+}
+.footer-container .info-section .contact-block .contact-details .availibility-badge {
+  background-color: #51eef9;
+  color: #ffffff;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 130px;
+  border-radius: 50% 0px 0px 50%;
+  padding: 10px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.footer-container .info-section .contact-block .contact-details .availibility-badge span {
+  font-size: 3rem;
+  font-weight: 800;
+}
+.footer-container .info-section .contact-block .contact-details .availibility-badge p {
+  font-size: 1rem;
+  margin: 0;
+}
+.footer-container .info-section .resources-block .logo {
+  width: auto;
+  height: 300px;
+  margin: 10px 80px;
+}
+.footer-container .info-section .resources-block .info-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px;
+  background-color: #EE9E1A;
+}
+.footer-container .info-section .resources-block .info-links ul {
+  list-style: none;
+  display: inline;
+}
+.footer-container .info-section .resources-block .info-links ul li {
+  display: inline;
+}
+
 .hero-section {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   position: relative;
-  height: 650px;
+  height: 82vh;
   overflow: hidden;
 }
 .hero-section .hero-image-container {
