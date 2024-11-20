@@ -31,7 +31,7 @@
                 position: relative;
                 flex-direction: column;
                 justify-content: center;
-                flex: 2;
+                flex: 1 auto;
                 margin-left: 100px;
 
                 h2 {
@@ -51,7 +51,7 @@
                 }
                 .availibility-badge {
                     background-color: $secondary-color;
-                    color: #ffffff;
+                    color: $tertiary-color;
                     display: inline-flex;
                     flex-direction: column;
                     align-items: center;
@@ -62,7 +62,8 @@
                     padding: 10px;
                     position: absolute;
                     top: 0px; 
-                    right: 0px; 
+                    right: 0px;
+                    filter:contrast(2); 
 
 
                     span {
@@ -79,27 +80,42 @@
         }
 
         .resources-block {
+            display: flex;
             
-            .logo {
-                width: auto;
-                height: 300px;
-                margin: 10px 80px;
+            .logo-container {
+                margin-left: 20px;
+
+                .logo {
+                    width: auto;
+                    height: 250px;
+                }
             }
 
             .info-links {
+                flex: 1;
                 display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: flex-end;
-                padding: 20px;
-                background-color: $primary-color;
+                justify-content: center;
+                align-items: center;
+                border-bottom-left-radius: 80px;
+                border-top-left-radius: 80px;
+                background-color: #FFD899;
+                padding: 0px 30px 0px 30px;
 
                 ul {
                     list-style: none;
-                    display: inline;
 
                     li {
-                        display: inline;
+                        max-width: 300px;
+                        float: left;
+                        gap: 10px
+
+                        p {
+                            width: 200px;
+                        }
+                    }
+
+                    .button {
+                        @include primary-button;
                     }
                 }
             }
