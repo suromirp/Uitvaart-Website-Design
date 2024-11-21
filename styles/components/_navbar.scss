@@ -3,15 +3,14 @@
 .top-bar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
   padding: 0 20px;
   height: 40px;
   background-color: $tertiary-color;
   font-size: 15px;
 
   .text {
-    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
 
     p > span {
       color: $secondary-color;
@@ -20,12 +19,12 @@
   }
   .links {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 
     a {
       text-decoration: none;
       color: $text-color;
-      font-size: 15px;
     }
 
     a > span {
@@ -114,5 +113,90 @@ nav {
       transition: background-color 0.7s ease;
       box-shadow: 0 0 10px $secondary-color;
     }
-  }  
+  }
+
+  .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      span {
+        display: block;
+        height: 3px;
+        background-color: $text-color;
+        border-radius: 2px;  
+    }
+  }
+}
+
+// @media queries
+
+// Mobile max-width: 375px
+
+@include breakpoint(mobile) {
+
+  .wrapper {
+    max-width: none;
+    width: auto;
+    margin: auto;
+  }
+
+  .top-bar {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin: 11px 0;
+  font-size: 14px;
+
+  .text {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 7px;
+    text-align: justify;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .divider {
+      display: none;
+    }
+  }
+}
+
+  .nav-container {
+
+    .nav-links {
+      display: none;
+    }
+ 
+  }
+}
+
+// Tablet max-width: 600px
+@include breakpoint(tablet) {
+  .top-bar {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    justify-content: center;
+    margin: 11px 0;
+    font-size: 14px;
+  }
+
+  .text {
+    text-align: center;
+    width: inherit;
+  }
+
+  .links {
+    justify-content: center;
+  }
 }

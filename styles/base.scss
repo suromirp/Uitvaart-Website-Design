@@ -1,4 +1,5 @@
 //_base.scss
+
 * {
   margin: 0;
   padding: 0;
@@ -19,4 +20,52 @@ body {
   max-width: 1440px;
   width: 1440px;
   margin: 0 auto;
+}
+
+// @media queries
+
+@include breakpoint(mobile) {
+  body {
+    font-size: 14px;
+  }
+  .wrapper {
+    padding: 0;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@include breakpoint(tablet) {
+  body {
+    font-size: 15px;
+  }
+
+  .wrapper {
+    padding: 0;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@include breakpoint(laptop) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@include breakpoint(desktop) {
+  .wrapper {
+    max-width: 1200px;
+  }
+}
+
+@include breakpoint(large) {
+  .wrapper {
+    max-width: 1440px;
+  }
+}
+
+// Default styles for mobile-first approach
+body {
+  font-size: 14px;
 }

@@ -48,3 +48,20 @@
     font-weight: 800;
   }
 }
+
+// @media mixins
+
+@mixin breakpoint($size) {
+  @if $size == mobile {
+    @media (max-width: 375px) { @content; }
+  } @else if $size == tablet {
+    @media (max-width: 600px) { @content; }
+  } @else if $size == laptop {
+    @media (max-width: 768px) { @content; }
+  } @else if $size == desktop {
+    @media (max-width: 1024px) { @content; }
+  } @else if $size == large {
+    @media (max-width: 1440px) { @content; }
+  }
+}
+
