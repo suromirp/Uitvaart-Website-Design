@@ -134,15 +134,13 @@ nav .nav-container .contact-button:hover {
 .footer-container .info-section .contact-block .image-container {
   display: flex;
   flex: 1;
-  margin-right: 40px;
 }
 .footer-container .info-section .contact-block .image-container img {
-  width: 70vh;
+  width: 85vh;
   height: 40vh;
   max-height: 50vh;
-  max-width: 80vh;
+  max-width: 90vh;
   object-fit: cover;
-  border-radius: 10px;
   border-bottom-right-radius: 100px;
 }
 .footer-container .info-section .contact-block .contact-details {
@@ -151,7 +149,7 @@ nav .nav-container .contact-button:hover {
   flex-direction: column;
   justify-content: center;
   flex: 1 auto;
-  margin-left: 100px;
+  margin-left: 15vh;
 }
 .footer-container .info-section .contact-block .contact-details h2 {
   font-size: 3rem;
@@ -167,7 +165,7 @@ nav .nav-container .contact-button:hover {
   font-weight: 600;
 }
 .footer-container .info-section .contact-block .contact-details .availibility-badge {
-  background-color: #51eef9;
+  background-color: #6699ff;
   color: #ffffff;
   display: inline-flex;
   flex-direction: column;
@@ -180,7 +178,6 @@ nav .nav-container .contact-button:hover {
   position: absolute;
   top: 0px;
   right: 0px;
-  filter: contrast(2);
 }
 .footer-container .info-section .contact-block .contact-details .availibility-badge span {
   font-size: 3rem;
@@ -192,40 +189,112 @@ nav .nav-container .contact-button:hover {
 }
 .footer-container .info-section .resources-block {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding: 40px 0;
 }
 .footer-container .info-section .resources-block .logo-container {
-  margin-left: 20px;
+  display: flex;
+  margin-left: 2vw;
 }
 .footer-container .info-section .resources-block .logo-container .logo {
+  height: 350px;
   width: auto;
-  height: 250px;
 }
 .footer-container .info-section .resources-block .info-links {
-  flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom-left-radius: 80px;
-  border-top-left-radius: 80px;
+  flex-wrap: wrap;
   background-color: #FFD899;
-  padding: 0px 30px 0px 30px;
+  border-top-left-radius: 90px;
+  border-bottom-left-radius: 90px;
+  padding: 75px 60px;
+  gap: 30px;
 }
-.footer-container .info-section .resources-block .info-links ul {
-  list-style: none;
+.footer-container .info-section .resources-block .info-links .info-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  max-width: 280px;
 }
-.footer-container .info-section .resources-block .info-links ul li {
-  max-width: 300px;
-  float: left;
-  gap: 10px p;
-  gap-width: 200px;
+.footer-container .info-section .resources-block .info-links .info-item h2 {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
-.footer-container .info-section .resources-block .info-links ul .button {
+.footer-container .info-section .resources-block .info-links .info-item p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  width: 229px;
+}
+.footer-container .info-section .resources-block .info-links .info-item .button {
   background-color: #EE9E1A;
   color: #ffffff;
   font-weight: 600;
   border-radius: 10px;
   padding: 10px 25px;
   text-decoration: none;
+  font-size: 14px;
+}
+.footer-container .footer-navigation {
+  padding: 19vh 0 1vh 0px;
+  background-color: #FAC265;
+}
+.footer-container .footer-navigation .navigation-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.footer-container .footer-navigation .navigation-container ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 46px 0;
+  list-style: none;
+}
+.footer-container .footer-navigation .navigation-container ul li {
+  text-align: center;
+}
+.footer-container .footer-navigation .navigation-container ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 500;
+}
+.footer-container .footer-navigation .navigation-container ul li a:hover {
+  color: #fff;
+}
+.footer-container .footer-navigation .navigation-container ul li a:not(.social-favicons a)::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 2px;
+  background-color: white;
+  margin: 7px auto;
+}
+.footer-container .footer-navigation .navigation-container ul li.social-favicons {
+  grid-column: 4;
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+}
+.footer-container .footer-navigation .navigation-container ul li.social-favicons:hover {
+  color: black;
+}
+.footer-container .footer-navigation .navigation-container ul li.social-favicons a img {
+  width: 40px;
+  height: 40px;
+}
+.footer-container .footer-navigation .navigation-container .logo-white {
+  width: 200px;
+  height: auto;
+  margin-top: 15px;
+}
+.footer-container .site-info-bar {
+  padding: 10px;
+}
+.footer-container .site-info-bar p {
+  text-align: center;
+  font-size: 15px;
 }
 
 .hero-section {
