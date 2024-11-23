@@ -1,0 +1,52 @@
+// =============================
+// Breakpoints Configuration
+// =============================
+
+// Central configuration of breakpoints.
+// Add new breakpoints or modify existing ones here.
+$breakpoints: (
+  mobileS: 320px,
+  mobileM: 375px,
+  mobileL: 425px,
+  tablet: 768px,
+  laptop: 1024px,
+  laptopL: 1440px,
+  desktop: 1920px,
+  xlarge: 2560px
+);
+
+// =============================
+// Mixin: Breakpoint
+// =============================
+
+// Flexible mixin for handling breakpoints.
+// It retrieves the value from the $breakpoints map.
+@mixin breakpoint($size) {
+  $breakpoint: map-get($breakpoints, $size); // Fetch value from the map.
+
+  @if $breakpoint {
+    @media (max-width: $breakpoint) { 
+      @content; 
+    }
+  } @else {
+    @error "Breakpoint #{$size} not found in $breakpoints map.";
+  }
+}
+
+// =============================
+// Mixin: Min-Max Range (optional)
+// =============================
+
+// Mixin to target a range between two breakpoints.
+@mixin breakpoint-range($min-size, $max-size) {
+  $min-breakpoint: map-get($breakpoints, $min-size);
+  $max-breakpoint: map-get($breakpoints, $max-size);
+
+  @if $min-breakpoint and $max-breakpoint {
+    @media (min-width: $min-breakpoint) and (max-width: $max-breakpoint) {
+      @content;
+    }
+  } @else {
+    @error "One or both breakpoints not found in $breakpoints map.";
+  }
+}

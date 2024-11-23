@@ -1,0 +1,29 @@
+//_base.scss
+
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'breakpoints' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+  font-family: 'poppins', 'Times New Roman';
+  font-size: $font-size-base;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 1440px;
+  margin: 0 auto;
+}
+
+// @media queries

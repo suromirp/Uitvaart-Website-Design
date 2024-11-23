@@ -1,5 +1,10 @@
 // _footer.scss
 
+@use '../variables' as *;
+@use '../mixins' as *;
+@use '../breakpoints' as *;
+
+
 .footer-container {
     background-color: white;
 
