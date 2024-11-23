@@ -29,7 +29,7 @@ body {
   align-items: center;
   height: 40px;
   background-color: #ffffff;
-  font-size: 15px;
+  font-size: 14px;
 }
 .top-bar .text {
   display: flex;
@@ -136,16 +136,40 @@ nav .hamburger-menu {
   justify-content: space-between;
   width: 40px;
   height: 40px;
-  background: #fff;
+  background: none;
   border: none;
   cursor: pointer;
+  position: relative;
 }
 nav .hamburger-menu span {
   display: block;
   height: 3px;
   width: 100%;
-  background-color: black;
+  background-color: rgb(209, 111, 31);
   border-radius: 2px;
+  position: absolute;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+nav .hamburger-menu span:nth-child(1) {
+  top: 0;
+}
+nav .hamburger-menu span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .hamburger-menu span:nth-child(3) {
+  bottom: 0;
+}
+nav .hamburger-menu.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 50%;
+}
+nav .hamburger-menu.open span:nth-child(2) {
+  opacity: 0;
+}
+nav .hamburger-menu.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 50%;
 }
 
 @media (min-width: 320px) and (max-width: 425px) {
@@ -161,8 +185,10 @@ nav .hamburger-menu span {
     justify-content: center;
     align-items: flex-start;
     padding: 6px;
+    font-size: 12px;
   }
   nav .top-bar .text {
+    display: none;
     width: 100%;
     text-align: center;
     margin-bottom: 5px;
@@ -170,8 +196,8 @@ nav .hamburger-menu span {
   }
   nav .top-bar .links {
     width: 100%;
-    justify-content: center;
-    gap: 5px;
+    justify-content: left;
+    gap: 10px;
   }
   nav .top-bar .links .divider {
     display: none;
@@ -193,19 +219,14 @@ nav .hamburger-menu span {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 80px;
+    top: 90px;
     right: 0;
     width: 100%;
     background-color: #ffffff;
     padding: 10px 0;
-    transition: transform 0.3s ease-in-out;
-    transform: translateY(-100%);
-    overflow-y: auto;
-    max-height: calc(100vh - 60px);
   }
   nav .nav-container .nav-links.show {
     display: flex;
-    transform: translateY(0);
     z-index: 1;
   }
   nav .nav-container .nav-links li {

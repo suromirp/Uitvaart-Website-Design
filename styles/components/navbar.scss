@@ -15,7 +15,7 @@
   align-items: center;
   height: 40px;
   background-color: $tertiary-color;
-  font-size: 15px;
+  font-size: 14px;
 
   .text {
     display: flex;
@@ -142,17 +142,56 @@ nav {
       justify-content: space-between;
       width: 40px;
       height: 40px;
-      background: #fff;
+      background: none;
       border: none;
       cursor: pointer;
+      position: relative;
 
       span {
         display: block;
         height: 3px;
         width: 100%;
-        background-color: black;
-        border-radius: 2px;  
-    }
+        background-color: rgb(209, 111, 31);
+        border-radius: 2px;
+        position: absolute;
+        // For test!!
+
+        // transition: all 0.4s ease;
+        // transition: transform 0.3s cubic-bezier(0.5, 0, 0.75, 0);
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+//Hamburger vorm
+        &:nth-child(1) {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &:nth-child(3) {
+          bottom: 0;
+        }
+      }
+// Cross
+      &.open {
+        span {
+          &:nth-child(1) {
+            transform: rotate(45deg);
+            top: 50%;
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 50%;
+          }
+        }
+      }
   }
 }
 
@@ -178,8 +217,11 @@ nav {
       justify-content: center;
       align-items: flex-start;
       padding: 6px;
+      font-size: 12px;
 
       .text {
+        display: none;
+        // ! Delete properties below if not used ¡
         width: 100%;
         text-align: center; 
         margin-bottom: 5px;
@@ -188,8 +230,8 @@ nav {
 
       .links {
         width: 100%;
-        justify-content: center;
-        gap: 5px;
+        justify-content: left;
+        gap: 10px;
 
         .divider {
           display: none;
@@ -223,19 +265,14 @@ nav {
           display: none;
           flex-direction: column;
           position: absolute;
-          top: 80px;
+          top: 90px;
           right: 0;
           width: 100%;
           background-color: $tertiary-color;
           padding: 10px 0;
-          transition: transform 0.3s ease-in-out;
-          transform: translateY(-100%);
-          overflow-y: auto;
-          max-height: calc(100vh - 60px);
 
           &.show {
             display: flex;
-            transform: translateY(0);
             z-index: 1;
           }
           
