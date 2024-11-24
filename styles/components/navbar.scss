@@ -34,11 +34,11 @@
     a {
       text-decoration: none;
       color: $text-color;
-    }
 
-    a > span {
-      color: $secondary-color;
-      font-weight: 500;
+      span {
+        color: $secondary-color;
+        font-weight: 500;
+      }
     }
 
     .divider {
@@ -46,14 +46,13 @@
       margin: 0;
     }
   }
-}
 
-.top-bar.hidden {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  &.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
 }
-
 
 // Top bar divider
 .top-bar-divider {
@@ -108,31 +107,32 @@ nav {
       li {
         display: flex;
         align-items: center;
-      }
 
-      a {
-        text-decoration: none;
-        color: $text-color;
-      }
+        a {
+          text-decoration: none;
+          color: $text-color;
 
-      a:active, a:hover {
-        color: $primary-color;
-      }
-    }
-    .contact-button {
-      background-color: $primary-color;
-      color: $tertiary-color !important;
-      font-weight: 600;
-      border-radius: 10px;
-      padding: 10px 25px;
-      text-decoration: none;
-      margin-left: auto;
-    }
+          &:active, &:hover {
+            color: $primary-color;
+          }
+        }
 
-    .contact-button:hover {
-      color: $secondary-color;
-      transition: background-color 0.7s ease;
-      box-shadow: 0 0 10px $secondary-color;
+        .contact-button {
+          background-color: $primary-color;
+          color: $tertiary-color !important;
+          font-weight: 600;
+          border-radius: 10px;
+          padding: 10px 25px;
+          text-decoration: none;
+          margin-left: auto;
+
+          &:hover {
+            color: $secondary-color;
+            transition: background-color 0.7s ease;
+            box-shadow: 0 0 10px $secondary-color;
+          }
+        }
+      }
     }
   }
 
@@ -160,7 +160,7 @@ nav {
         // transition: transform 0.3s cubic-bezier(0.5, 0, 0.75, 0);
         transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 
-//Hamburger vorm
+        //Hamburger shape
         &:nth-child(1) {
           top: 0;
         }
@@ -174,7 +174,7 @@ nav {
           bottom: 0;
         }
       }
-// Cross
+      // Cross
       &.open {
         span {
           &:nth-child(1) {
@@ -192,8 +192,8 @@ nav {
           }
         }
       }
+    }
   }
-}
 
 // ===================================
 // Mobile (Media Queries)
@@ -213,28 +213,28 @@ nav {
       max-width: 100%;
       width: 100%; 
       margin: 0 auto;
-    }
 
-    .top-bar {
-      width: 100vw;
-      height: fit-content;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 6px;
-      font-size: 12px;
+      .top-bar {
+        width: 100vw;
+        height: fit-content;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 6px;
+        font-size: 12px;
 
-      .text {
-        display: none;
-      }
-
-      .links {
-        width: 100%;
-        justify-content: left;
-        gap: 10px;
-
-        .divider {
+        .text {
           display: none;
+        }
+
+        .links {
+          width: 100%;
+          justify-content: left;
+          gap: 10px;
+
+          .divider {
+            display: none;
+          }
         }
       }
     }
@@ -264,8 +264,8 @@ nav {
         .nav-links {
           display: none;
           flex-direction: column;
-          position: absolute;
-          top: 90px;
+          position: fixed;
+          top: 80px;
           right: 0;
           width: 100%;
           background-color: $tertiary-color;
