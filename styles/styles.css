@@ -422,7 +422,7 @@ nav .hamburger-menu.open span:nth-child(3) {
   align-items: flex-end;
   justify-content: flex-start;
   position: relative;
-  height: 80vw;
+  height: 78vh;
   overflow: hidden;
 }
 .hero-section .hero-image-container {
@@ -442,7 +442,7 @@ nav .hamburger-menu.open span:nth-child(3) {
   color: #ffffff;
 }
 .hero-section .hero-text h1 {
-  font-size: clamp(16px, 4vw, 50px);
+  font-size: clamp(24px, 5vw, 50px);
   font-weight: 500;
   line-height: 1.4;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
@@ -607,7 +607,7 @@ nav .hamburger-menu.open span:nth-child(3) {
 .banner-section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: auto;
   overflow: hidden;
 }
 .banner-section img {
@@ -636,7 +636,7 @@ nav .hamburger-menu.open span:nth-child(3) {
   margin-bottom: 3vw;
 }
 .banner-section .banner-container h2 {
-  font-size: clamp(30px, 3vw, 40px);
+  font-size: clamp(24px, 3vw, 40px);
   line-height: 1.2;
 }
 .banner-section .banner-container p,
@@ -658,6 +658,7 @@ nav .hamburger-menu.open span:nth-child(3) {
   border-radius: 10px;
   padding: 10px 25px;
   text-decoration: none;
+  margin: 10px;
 }
 
 .highlight-section {
@@ -666,12 +667,12 @@ nav .hamburger-menu.open span:nth-child(3) {
   text-align: center;
 }
 .highlight-section h2 {
-  font-size: clamp(30px, 3vw, 45px);
+  font-size: clamp(24px, 3vw, 45px);
   font-weight: 700;
   color: #EE9E1A;
 }
 .highlight-section p {
-  font-size: clamp(20px, 3vw, 30px);
+  font-size: clamp(18px, 3vw, 30px);
   font-weight: 400;
 }
 
@@ -749,10 +750,10 @@ nav .hamburger-menu.open span:nth-child(3) {
   margin: 0 20px;
 }
 .farewell-section .text-container h2 {
-  font-size: 35px;
+  font-size: clamp(25px, 6vh, 35px);
 }
 .farewell-section .text-container p {
-  font-size: 25px;
+  font-size: clamp(14px, 4vh, 18px);
   margin-top: 7vh;
   margin-bottom: 3vh;
 }
@@ -777,7 +778,7 @@ nav .hamburger-menu.open span:nth-child(3) {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 .farewell-section .image-container img {
-  width: 40vw;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -814,6 +815,93 @@ nav .hamburger-menu.open span:nth-child(3) {
 }
 .farewell-section .slider-dots .dot:hover {
   background-color: #EE9E1A;
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .hero-section {
+    height: 79vh;
+  }
+}
+@media (min-width: 320px) and (max-width: 425px) {
+  .hero-section {
+    height: 42vh;
+  }
+  .blog-preview-section .preview-container {
+    margin: 10px auto;
+  }
+  .blog-preview-section .preview-container .preview-block {
+    align-items: center;
+  }
+  .wrapper {
+    width: 44vh;
+    max-width: none;
+  }
+  .wrapper .banner-container .text-bottom-right {
+    align-self: flex-start;
+  }
+  .highlight-section {
+    padding: 25px 0;
+  }
+  .highlight-section h2 {
+    margin-bottom: 3px;
+  }
+  .image-slider-section {
+    padding: 20px 3px 10px 3px;
+  }
+  .image-slider-section .slider-container {
+    flex-direction: column;
+  }
+  .image-slider-section .slider-container .slider-nav {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+  .image-slider-section .slider-container .slider-nav.pre {
+    left: 10px;
+  }
+  .image-slider-section .slider-container .slider-nav.next {
+    right: 10px;
+  }
+  .image-slider-section .slider-container .image-overlay {
+    font-size: clamp(14px, 4vw, 16px);
+  }
+  .image-slider-section .blue-text {
+    font-size: clamp(21px, 4vw, 26px);
+  }
+  .farewell-section {
+    flex-direction: column-reverse;
+    padding: 20px 0;
+    height: auto;
+  }
+  .farewell-section .left-container {
+    width: 100%;
+    justify-items: center;
+  }
+  .farewell-section .left-container .text-container {
+    margin-top: 17px;
+  }
+  .farewell-section .left-container .text-container h2 {
+    font-size: clamp(18px, 6vw, 21px);
+  }
+  .farewell-section .left-container .text-container p {
+    margin-top: 3vh;
+  }
+  .farewell-section .left-container .text-container .button {
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 3px;
+  }
+  .farewell-section .right-container {
+    width: 100%;
+  }
+  .farewell-section .right-container .image-container {
+    width: 100%;
+    margin-right: 20px;
+  }
+  .farewell-section .right-container .image-container img {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
