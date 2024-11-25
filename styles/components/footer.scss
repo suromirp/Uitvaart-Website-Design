@@ -209,3 +209,26 @@
         }
     }
 }
+
+@include breakpoint-range(mobileS, tablet) {
+
+    .footer-container {
+        padding: 40px 10px;
+
+        .info-section {
+
+            .contact-block {
+
+                .image-container {
+
+                    img {
+                        width: auto;
+                        height: 64vw;
+                        max-height: 40vh;
+                        max-width: 63vh;
+                    }
+                }
+            }
+        }
+    }
+}

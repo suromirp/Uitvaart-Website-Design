@@ -417,6 +417,17 @@ nav .hamburger-menu.open span:nth-child(3) {
   font-size: 15px;
 }
 
+@media (min-width: 320px) and (max-width: 768px) {
+  .footer-container {
+    padding: 40px 10px;
+  }
+  .footer-container .info-section .contact-block .image-container img {
+    width: auto;
+    height: 64vw;
+    max-height: 40vh;
+    max-width: 63vh;
+  }
+}
 .hero-section {
   display: flex;
   align-items: flex-end;
