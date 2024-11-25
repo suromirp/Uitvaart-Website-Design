@@ -370,7 +370,8 @@
   .blog-preview-section {
 
     .preview-container {
-      margin: 10px auto;
+      margin: 40px auto;
+      padding: 0 20px;
 
       .preview-block {
         align-items: center;
@@ -381,10 +382,12 @@
 // Banner section
 
   .wrapper {
-    width: 44vh;
-    max-width: none;
+    width: auto;
+    min-width: 100%;
+    max-width: 100%;
 
     .banner-container {
+      margin: 40px 30px;
 
       .text-bottom-right {
         align-self: flex-start;
@@ -394,16 +397,18 @@
 
 // Highlight section
 
-  .highlight-section {
-    padding: 25px 0;
+    .highlight-section {
+      padding: 25px 20px;
 
-    h2 {
-      margin-bottom: 3px;
+      h2 {
+        margin-bottom: 3px;
+      }
     }
-  }
+
+// Image slider section
 
   .image-slider-section {
-    padding: 20px 3px 10px 3px;
+    padding: 40px 14px;
 
     .slider-container {
       flex-direction: column;
@@ -437,7 +442,7 @@
 
   .farewell-section {
     flex-direction: column-reverse;
-    padding: 20px 0;
+    padding: 40px 0;
     height: auto;
 
     .left-container {
@@ -445,7 +450,9 @@
       justify-items: center;
 
       .text-container {
-        margin-top: 17px;
+        margin-top: 25px;
+        width: 80vw;
+        text-align: center;
 
         h2 {
           font-size: clamp(18px, 6vw, 21px);
@@ -459,6 +466,7 @@
           padding: 10px;
           font-size: 15px;
           margin-top: 3px;
+          align-self: center;
         }
       }
     }

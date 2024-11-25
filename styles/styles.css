@@ -827,26 +827,31 @@ nav .hamburger-menu.open span:nth-child(3) {
     height: 42vh;
   }
   .blog-preview-section .preview-container {
-    margin: 10px auto;
+    margin: 40px auto;
+    padding: 0 20px;
   }
   .blog-preview-section .preview-container .preview-block {
     align-items: center;
   }
   .wrapper {
-    width: 44vh;
-    max-width: none;
+    width: auto;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .wrapper .banner-container {
+    margin: 40px 30px;
   }
   .wrapper .banner-container .text-bottom-right {
     align-self: flex-start;
   }
   .highlight-section {
-    padding: 25px 0;
+    padding: 25px 20px;
   }
   .highlight-section h2 {
     margin-bottom: 3px;
   }
   .image-slider-section {
-    padding: 20px 3px 10px 3px;
+    padding: 40px 14px;
   }
   .image-slider-section .slider-container {
     flex-direction: column;
@@ -871,7 +876,7 @@ nav .hamburger-menu.open span:nth-child(3) {
   }
   .farewell-section {
     flex-direction: column-reverse;
-    padding: 20px 0;
+    padding: 40px 0;
     height: auto;
   }
   .farewell-section .left-container {
@@ -879,7 +884,9 @@ nav .hamburger-menu.open span:nth-child(3) {
     justify-items: center;
   }
   .farewell-section .left-container .text-container {
-    margin-top: 17px;
+    margin-top: 25px;
+    width: 80vw;
+    text-align: center;
   }
   .farewell-section .left-container .text-container h2 {
     font-size: clamp(18px, 6vw, 21px);
@@ -891,6 +898,7 @@ nav .hamburger-menu.open span:nth-child(3) {
     padding: 10px;
     font-size: 15px;
     margin-top: 3px;
+    align-self: center;
   }
   .farewell-section .right-container {
     width: 100%;
