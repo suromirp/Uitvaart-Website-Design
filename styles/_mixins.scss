@@ -2,6 +2,9 @@
 
 @use 'variables' as *;
 
+// ===================================
+// Primary button
+// ===================================
 
 @mixin primary-button {
   background-color: $primary-color;
@@ -12,6 +15,9 @@
   text-decoration: none;
 }
 
+// ===================================
+// Preview block
+// ===================================
 @mixin preview-block-styles(
   $top-left-radius: 10px,
   $top-right-radius: 10px,
