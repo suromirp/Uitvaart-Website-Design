@@ -210,14 +210,22 @@
     }
 }
 
-@include breakpoint-range(mobileS, tablet) {
+// ===================================
+// Media Queries
+// ===================================
+
+@include breakpoint-range(mobileS, mobileL) {
+
+// Footer container
 
     .footer-container {
-        padding: 40px 10px;
+        padding: 40px 0 0;
 
+// Info section 
         .info-section {
 
             .contact-block {
+                flex-wrap: wrap;
 
                 .image-container {
 
@@ -228,7 +236,75 @@
                         max-width: 63vh;
                     }
                 }
+
+                .contact-details {
+                    margin: 40px 20px;
+
+                    h2 {
+                        font-size: 3vh;
+                    }
+
+                    p {
+                        font-size: 2rem;
+                    }
+
+                    .availibility-badge {
+                        display: none;
+                    }
+                }
             }
+
+            .resources-block {
+                padding: 0;
+                justify-content: center;
+
+                .logo-container {
+                    margin: 0;
+
+
+                    .logo {
+                        height: 25vh;
+                    }
+                }
+
+                .info-links {
+                    padding: 40px 60px;
+                    margin: 40px 0;
+                    justify-content: center;
+                }
+            }
+        }
+
+
+// Footer navigation
+
+        .footer-navigation {
+            padding: 25px 0;
+
+            .navigation-container {
+                align-items: center;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+
+                    li {
+
+                        a {
+                            font-size: 22px;
+
+                            &:not(.social-favicons a)::after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .site-info-bar {
+            padding: 5px;
         }
     }
 }
