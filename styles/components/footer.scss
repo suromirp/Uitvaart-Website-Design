@@ -214,7 +214,7 @@
 // Media Queries
 // ===================================
 
-@include breakpoint-range(mobileS, mobileL) {
+@include breakpoint-range(mobileS, tablet) {
 
 // Footer container
 
@@ -293,6 +293,7 @@
 
                         a {
                             font-size: 22px;
+                            flex-wrap: nowrap;
 
                             &:not(.social-favicons a)::after {
                                 width: 100%;

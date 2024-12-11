@@ -417,7 +417,7 @@ nav .hamburger-menu.open span:nth-child(3) {
   font-size: 15px;
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .footer-container {
     padding: 40px 0 0;
   }
@@ -470,6 +470,7 @@ nav .hamburger-menu.open span:nth-child(3) {
   }
   .footer-container .footer-navigation .navigation-container ul li a {
     font-size: 22px;
+    flex-wrap: nowrap;
   }
   .footer-container .footer-navigation .navigation-container ul li a:not(.social-favicons a)::after {
     width: 100%;
