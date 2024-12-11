@@ -17,10 +17,17 @@ body {
 }
 
 .wrapper {
+  max-width: 90%;
   max-width: 1440px;
   margin: 0 auto;
 }
 
+@media (min-width: 320px) and (max-width: 1920px) {
+  .wrapper {
+    width: 90%;
+    max-width: none;
+  }
+}
 .top-bar {
   opacity: 1;
   display: flex;
@@ -179,12 +186,7 @@ nav .hamburger-menu.open span:nth-child(3) {
     width: 100%;
     z-index: 5;
   }
-  nav .wrapper {
-    max-width: 100%;
-    width: 100%;
-    margin: 0 auto;
-  }
-  nav .wrapper .top-bar {
+  nav .top-bar {
     width: 100vw;
     height: 100%;
     flex-wrap: wrap;
@@ -193,15 +195,15 @@ nav .hamburger-menu.open span:nth-child(3) {
     padding: 6px;
     font-size: 12px;
   }
-  nav .wrapper .top-bar .text {
+  nav .top-bar .text {
     display: none;
   }
-  nav .wrapper .top-bar .links {
+  nav .top-bar .links {
     width: 100%;
     justify-content: left;
     gap: 10px;
   }
-  nav .wrapper .top-bar .links .divider {
+  nav .top-bar .links .divider {
     display: none;
   }
   nav .top-bar-divider {
