@@ -90,10 +90,10 @@ nav {
 
       .logo {
         width: auto;
-        height: auto;
+        height: 23vw;
         max-height: 125px;
         object-fit: cover;
-        margin-left: 40px;
+        margin-left: 15px;
       }
     }  
 
@@ -200,7 +200,7 @@ nav {
 // Mobile (Media Queries)
 // ===================================
 
-@include breakpoint-range(mobileS, tablet) {
+@include breakpoint-range(mobileS, laptopM) {
 
   // Top bar
   nav {
@@ -250,15 +250,6 @@ nav {
       justify-content: space-between;
       background-color: $tertiary-color;
 
-      .logo-wrapper {
-
-        .logo {
-          height: 90px;
-          max-height: 100px;
-          margin-left: 15px;
-        }
-      }
-
         .nav-links {
           display: none;
           flex-direction: column;
@@ -289,3 +280,23 @@ nav {
   }
 
   // End nav
+
+// ===================================
+// Laptop (Media Queries)
+// ===================================
+@include breakpoint-range(laptop, laptopM) {
+  .top-bar {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+
+    .text {
+      display: flex;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
