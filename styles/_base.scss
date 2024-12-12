@@ -21,18 +21,7 @@ body {
 }
 
 .wrapper {
-  max-width: 90%;
+  width: 90%;
   max-width: 1440px;
   margin: 0 auto;
-}
-
-// =============================
-// Mobile (Media Queries)
-// =============================
-
-@include breakpoint-range(mobileS, desktop) {
-  .wrapper {
-    width: 90%;
-    max-width: none;
-  }
 }
