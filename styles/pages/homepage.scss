@@ -229,7 +229,6 @@
       max-width: 75vh;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 
       img {
         width: 100%;
@@ -299,8 +298,7 @@
     flex-direction: column;
     overflow: hidden;
     border-radius: 20px;
-    border: 1px solid $primary-color;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 0.5px solid lightgray;
 
     img {
       width: 100%;
@@ -336,15 +334,15 @@
       border-radius: 50%;
       cursor: pointer;
       transition: background-color 0.3s ease;
-    }
 
-    .dot active {
-      background-color: $primary-color;
-      transform: scale(1.2);
-    }
+      &:active {
+        background-color: $primary-color;
+        transform: scale(1.2);
+      }
 
-    .dot:hover {
-      background-color: $primary-color;
+      &:hover {
+        background-color: $primary-color;
+      }
     }
   }
 }
