@@ -14,7 +14,7 @@ $breakpoints: (
   laptopM: 1220px,
   laptopL: 1440px,
   desktop: 1920px,
-  xlarge: 2560px
+  xlarge: 2560px,
 );
 
 // =============================
@@ -27,8 +27,8 @@ $breakpoints: (
   $breakpoint: map-get($breakpoints, $size); // Fetch value from the map.
 
   @if $breakpoint {
-    @media (max-width: $breakpoint) { 
-      @content; 
+    @media (max-width: $breakpoint) {
+      @content;
     }
   } @else {
     @error "Breakpoint #{$size} not found in $breakpoints map.";

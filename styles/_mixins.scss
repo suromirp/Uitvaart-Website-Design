@@ -28,14 +28,15 @@
   $img-bottom-left-radius: 10px,
   $img-bottom-right-radius: 10px
 ) {
-  
-  border-radius: $top-left-radius $top-right-radius $bottom-right-radius $bottom-left-radius;
+  border-radius: $top-left-radius $top-right-radius $bottom-right-radius
+    $bottom-left-radius;
 
   img {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
-    border-radius: $img-top-left-radius $img-top-right-radius $img-bottom-right-radius $img-bottom-left-radius;
+    border-radius: $img-top-left-radius $img-top-right-radius
+      $img-bottom-right-radius $img-bottom-left-radius;
   }
 
   h3 {
@@ -59,4 +60,3 @@
     font-weight: 800;
   }
 }
-
