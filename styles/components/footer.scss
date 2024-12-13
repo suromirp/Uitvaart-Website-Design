@@ -15,13 +15,12 @@
 
       .image-container {
         display: flex;
-        flex: 1;
+        flex: 0 0 55%;
 
         img {
-          width: 85vh;
-          height: 40vh;
-          max-height: 50vh;
-          max-width: 90vh;
+          height: 40vw;
+          max-height: 430px;
+          width: 100%;
           object-fit: cover;
           border-bottom-right-radius: 100px;
         }
@@ -32,47 +31,43 @@
         position: relative;
         flex-direction: column;
         justify-content: center;
-        flex: 1 auto;
-        margin-left: 15vh;
-
-        h2 {
-          font-size: 3rem;
-          margin-bottom: 1rem;
-          font-weight: 600;
-        }
+        flex: 1 0 40%;
+        margin-left: 3vw;
+        font-size: clamp(14px, 2vw, 38px);
+        font-weight: 600;
 
         p {
-          font-size: 3rem;
           margin: 0.2rem 0;
           font-weight: 400;
-
-          span {
-            font-weight: 600;
-          }
         }
-        .availibility-badge {
-          background-color: #6699ff;
-          color: $tertiary-color;
-          display: inline-flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          width: 140px;
-          height: 130px;
-          border-radius: 50% 0px 0px 50%;
-          padding: 10px;
-          position: absolute;
-          top: 0px;
-          right: 0px;
 
-          span {
-            font-size: 3rem;
-            font-weight: 800;
-          }
+        .availibility-badge-container {
+          display: flex;
+          justify-content: flex-end;
+          width: 100%;
+          margin-top: 2rem;
 
-          p {
-            font-size: 1rem;
-            margin: 0;
+          .availibility-badge {
+            background-color: #6699ff;
+            color: $tertiary-color;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 130px;
+            border-radius: 50% 0 0 50%;
+            padding: 10px;
+
+            span {
+              font-size: 3rem;
+              font-weight: 800;
+            }
+
+            p {
+              font-size: 1rem;
+              margin: 0;
+            }
           }
         }
       }
@@ -80,7 +75,7 @@
 
     .resources-block {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       flex-wrap: wrap;
       background-color: #fff;
       padding: 40px 0;
@@ -90,8 +85,9 @@
         margin-left: 2vw;
 
         .logo {
-          height: 350px;
-          width: auto;
+          height: 20vw;
+          max-height: 200px;
+          min-height: 100px;
         }
       }
 
@@ -103,6 +99,7 @@
         border-bottom-left-radius: 90px;
         padding: 75px 60px;
         gap: 30px;
+        justify-content: center;
 
         .info-item {
           display: flex;
@@ -208,10 +205,10 @@
 }
 
 // ===================================
-// Media Queries
+// Mobile (Media Queries)
 // ===================================
 
-@include breakpoint-range(mobileS, tablet) {
+@include breakpoint-range(mobileS, mobileL) {
   // Footer container
 
   .footer-container {
@@ -221,18 +218,16 @@
     .info-section {
       .contact-block {
         flex-wrap: wrap;
+        align-items: center;
 
-        .image-container {
-          img {
-            width: auto;
-            height: 64vw;
-            max-height: 40vh;
-            max-width: 63vh;
-          }
+        .image-container,
+        .contact-details {
+          width: 100%;
+          flex: auto;
         }
 
         .contact-details {
-          margin: 40px 20px;
+          margin-top: 2rem;
 
           h2 {
             font-size: 3vh;
@@ -242,7 +237,7 @@
             font-size: 2rem;
           }
 
-          .availibility-badge {
+          .availibility-badge-container {
             display: none;
           }
         }
@@ -253,10 +248,11 @@
         justify-content: center;
 
         .logo-container {
-          margin: 0;
+          margin: 0 auto;
 
           .logo {
-            height: 25vh;
+            height: 25vw;
+            min-height: 115px;
           }
         }
 
