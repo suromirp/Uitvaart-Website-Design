@@ -4,11 +4,17 @@
 
 <!-- HOMEPAGE -->
 
-- [] Farewell sectie fixen op kleine schermen
+- [] tekst in hero hoger plaatsem voor kleinere displays
+- [x] Farewell sectie fixen op kleine schermen
 
 <!-- FOOTER -->
 
-- [] Footer netjes maken op alle display grotes
+- [x] Footer netjes maken op alle display grotes
+
+<!-- NEW PAGES -->
+
+- [] Over Adoré Uitvaart
+- [] Contactpagina
 
 <!-- GENERAL -->
 
