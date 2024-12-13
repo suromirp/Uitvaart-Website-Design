@@ -367,7 +367,7 @@
 // Mobile (Media Queries)
 // ===================================
 
-@include breakpoint-range(mobileS, mobileL) {
+@include breakpoint-range(mobileS, tabletMin) {
   // Hero section
 
   .hero-section {
