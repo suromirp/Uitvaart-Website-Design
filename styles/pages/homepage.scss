@@ -357,7 +357,7 @@
 
 @include breakpoint-range(tabletMin, tablet) {
   .hero-section {
-    height: 79vh;
+    max-height: 49vh;
   }
 }
 
@@ -365,7 +365,7 @@
 // Mobile (Media Queries)
 // ===================================
 
-@include breakpoint-range(mobileS, tabletMin) {
+@include breakpoint-range(mobileS, tablet) {
   // Hero section
 
   .hero-section {
