@@ -1,0 +1,1 @@
+Ik heb dit design ontwikkeld voor een uitvaartondernemer en werk momenteel aan de koppeling met WordPress. Voor de styling maak ik gebruik van SASS, en de interactieve elementen heb ik gebouwd met JavaScript. Het project bevindt zich op dit moment nog in ontwikkeling.
