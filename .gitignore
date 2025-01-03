@@ -1,6 +1,9 @@
+# Ignore Sass cache files
 .sass-cache/
+
+# Ignore Node.js modules
 node_modules/
 
-# CSS files
-*.css.map
-*.css
+# Include CSS files and source maps for GitHub Pages
+# *.css
+# *.css.map
