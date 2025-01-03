@@ -1,6 +1,6 @@
 <!-- HEADER -->
 
-- [] header topbar vloeiend laten overlopen
+- [x] header topbar vloeiend laten overlopen
 
 <!-- HOMEPAGE -->
 
